@@ -1,12 +1,61 @@
-*{
-    box-sizing: border-box;
+* {
     margin: 0;
+    box-sizing: border-box;
 }
 html, body {
     height: 100%;
     width: 100%;
+    background: #292929;
+    font-family: 'Inter', sans-serif;
+    #__next{
+        height: 100%;
+        width: 100%;
+    }
+    a {
+        color: inherit;
+        text-decoration: none;
+        :hover {
+        text-decoration: none;
+        }
+
+  }
+  .btn{
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      margin: 7.5px 0
+  }
+  .btn-primary{
+      color: #000;
+      background: #CDDC39;
+  }
 }
-#__next{
-    height: 100%;
-    width: 100%;
+
+.MuiRadio-colorSecondary.Mui-checked {
+    color: #CDDC39 !important;
+}
+.MuiRadio-root , .MuiIconButton-colorSecondary:hover{
+    color:#ccdc395d !important;
+}
+.MuiIconButton-colorSecondary:hover{
+    background-color:#ccdc391f !important;
+}
+.MuiLinearProgress-colorPrimary{
+    background: #ccdc395d !important;
+}
+.MuiLinearProgress-barColorPrimary{
+    background: #CDDC39 !important;
+}
+.trait{
+    .MuiLinearProgress-colorPrimary{
+    background: #000000 !important;
+}
+    .MuiLinearProgress-barColorPrimary{
+        background: #CDDC39 !important;
+    }
+}
+.MuiPaper-root{
+    background: #424242 !important;
+    margin: 7.5px;
+    color: #fff !important;
 }
