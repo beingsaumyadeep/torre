@@ -39,7 +39,7 @@ export const getServerSideProps = async (params) => {
   } else return { props: {} };
 };
 
-const search: React.FC<{}> = (props) => {
+const search: React.FC<{people, q}> = (props) => {
   const router = useRouter();
   if (router.isFallback) {
     return <LinearProgress />;
