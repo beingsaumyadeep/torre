@@ -88,7 +88,11 @@ const Home: React.FC<{}> = () => {
                     <input
                       type="text"
                       onFocus={() => setEdit(true)}
-                      onBlur={() => setEdit(false)}
+                      onBlur={() =>
+                        setTimeout(() => {
+                          setEdit(false);
+                        }, 3000)
+                      }
                       placeholder={`Search for ${
                         value === "job"
                           ? "Jobs / Internships"
@@ -149,41 +153,42 @@ const Home: React.FC<{}> = () => {
                   {loading ? <CircularProgress /> : ""}
                   {value === "person"
                     ? data.map((dt: any, index) => (
-                      <Link href={`/profile/${dt.username}`} key={index}>
-                        <a >
-                          <Card key={dt.name}>
-                            <CardHeader
-                              avatar={
-                                <Avatar
-                                  aria-label="users"
-                                  src={dt.picture}
-                                ></Avatar>
-                              }
-                              title={dt.name}
-                              subheader={dt.professionalHeadline}
-                            />
-                          </Card>
-                        </a></Link>
+                        <Link href={`/profile/${dt.username}`} key={index}>
+                          <a>
+                            <Card key={dt.name}>
+                              <CardHeader
+                                avatar={
+                                  <Avatar
+                                    aria-label="users"
+                                    src={dt.picture}
+                                  ></Avatar>
+                                }
+                                title={dt.name}
+                                subheader={dt.professionalHeadline}
+                              />
+                            </Card>
+                          </a>
+                        </Link>
                       ))
                     : ""}
                   {value === "job"
                     ? data.map((dt: any, index) => (
-                      <Link href={`/job/${dt.id}`} key={index}>
-                        <a>
-                          <Card key={dt.id}>
-                            <CardHeader
-                              avatar={
-                                <Avatar
-                                  aria-label="users"
-                                  src={dt.organizations[0].picture}
-                                ></Avatar>
-                              }
-                              title={dt.organizations[0].name}
-                              subheader="September 14, 2016"
-                            />
-                          </Card>
-                        </a>
-                      </Link>
+                        <Link href={`/job/${dt.id}`} key={index}>
+                          <a>
+                            <Card key={dt.id}>
+                              <CardHeader
+                                avatar={
+                                  <Avatar
+                                    aria-label="users"
+                                    src={dt.organizations[0].picture}
+                                  ></Avatar>
+                                }
+                                title={dt.organizations[0].name}
+                                subheader="September 14, 2016"
+                              />
+                            </Card>
+                          </a>
+                        </Link>
                       ))
                     : ""}
                 </div>
@@ -261,7 +266,7 @@ const Home: React.FC<{}> = () => {
           </Grid>
         </Container>
       </section>
-      <Footer/>
+      <Footer />
     </>
   );
 };
@@ -425,7 +430,7 @@ const ThemeText = styled.div`
     font-weight: 200;
     font-size: 16px;
     line-height: 1.4em;
-    margin: 15px 0
+    margin: 15px 0;
   }
 `;
 export default Home;

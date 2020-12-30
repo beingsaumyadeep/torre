@@ -60,7 +60,7 @@ const Job: React.FC<{ jobs }> = (props) => {
         <Menu>
           <div className="btn">
             <Link href="/">
-              <a>
+              <a style={{textAlign: "center"}}>
                 <Home />
                 <p>Home</p>
               </a>
@@ -68,7 +68,7 @@ const Job: React.FC<{ jobs }> = (props) => {
           </div>
           <div className="btn">
             <Link href="/">
-              <a>
+              <a style={{textAlign: "center"}}>
                 <Search />
                 <p>Search</p>
               </a>

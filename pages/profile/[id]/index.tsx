@@ -113,7 +113,7 @@ const Profile: React.FC<{ profile; stats }> = (props) => {
         <Menu>
           <div className="btn">
             <Link href="/">
-              <a>
+              <a style={{textAlign: "center"}}>
                 <Home />
                 <p>Home</p>
               </a>
@@ -121,15 +121,11 @@ const Profile: React.FC<{ profile; stats }> = (props) => {
           </div>
           <div className="btn">
             <Link href="/">
-              <a>
+              <a style={{textAlign: "center"}}>
                 <Search />
                 <p>Search</p>
               </a>
             </Link>
-          </div>
-          <div className="btn">
-            <Work />
-            <p>Jobs</p>
           </div>
         </Menu>
       </Header>
