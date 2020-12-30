@@ -9,7 +9,7 @@ import {
   Header,
   Logo,
   Menu,
-} from "./index.style";
+} from "../../../Components/profile/style";
 import {
   Container,
   Chip,

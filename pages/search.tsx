@@ -14,7 +14,7 @@ import {
   Typography,
 } from "@material-ui/core";
 import Head from "next/head";
-import { IMG } from "./profile/[id]/index.style";
+import { IMG } from "../Components/profile/style";
 import styled from "styled-components";
 import { Home } from "@material-ui/icons";
 import Link from "next/link";

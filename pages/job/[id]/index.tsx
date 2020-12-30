@@ -15,7 +15,7 @@ import { jobViewAPI } from "../../../API/jobs";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { Home, Search, Work } from "@material-ui/icons";
-import {Header, Logo , Menu, JobCard, ActivityCard} from "./index.style"
+import {Header, Logo , Menu, JobCard, ActivityCard} from "../../../Components/job/style"
 import Footer from "../../../Components/Footer";
 
 export const getStaticProps = async ({ params }) => {
