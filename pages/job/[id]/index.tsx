@@ -53,7 +53,7 @@ const Job: React.FC<{ jobs }> = (props) => {
   return (
     <>
       <Head>
-        <title></title>
+        <title>{props.jobs.objective} - Torre Jobs</title>
       </Head>
       <Header>
         <Logo>Torre</Logo>
@@ -113,7 +113,7 @@ const Job: React.FC<{ jobs }> = (props) => {
               </p>
             </Grid>
             <Grid item md={4} xs={12}>
-              <h5>By:</h5>   
+              <h5>By:</h5>
               <Link href={`/profile/${props.jobs.owner.username}`}>
                 <a>
                   <Card>
@@ -123,7 +123,8 @@ const Job: React.FC<{ jobs }> = (props) => {
                       subheader={props.jobs.owner.professionalHeadline}
                     />
                   </Card>
-                </a></Link>
+                </a>
+              </Link>
             </Grid>
           </Grid>
         </ActivityCard>

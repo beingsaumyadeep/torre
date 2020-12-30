@@ -16,7 +16,7 @@ import {
 import Head from "next/head";
 import { IMG } from "../Components/profile/style";
 import styled from "styled-components";
-import { Home } from "@material-ui/icons";
+import { Home, Search } from "@material-ui/icons";
 import Link from "next/link";
 import Footer from "../Components/Footer";
 
@@ -39,7 +39,7 @@ export const getServerSideProps = async (params) => {
   } else return { props: {} };
 };
 
-const Search: React.FC<{}> = (props) => {
+const search: React.FC<{}> = (props) => {
   const router = useRouter();
   if (router.isFallback) {
     return <LinearProgress />;
@@ -49,7 +49,7 @@ const Search: React.FC<{}> = (props) => {
   return (
     <>
       <Head>
-        <title></title>
+        <title>{props.q} - Torre</title>
       </Head>
       <Header>
         <Logo>Torre</Logo>
@@ -76,7 +76,7 @@ const Search: React.FC<{}> = (props) => {
         <h1 style={{ fontWeight: 200, color: "#fff" }}>Search for: {Data.q}</h1>
         {Data.job &&
           Data.job?.map((dt) => (
-            <Link href={`/profile/${dt.username}`} key={dt.id}>
+            <Link href={`/job/${dt.id}`} key={dt.id}>
               <a>
                 <Card>
                   <CardHeader
@@ -172,4 +172,4 @@ export const Menu = styled.div`
   }
 `;
 
-export default Search;
+export default search;
